@@ -10526,15 +10526,6 @@ yubicoauthenticator)
 yubikeymanager)
     name="YubiKey Manager"
     type="pkg"
-    appCustomVersion(){/usr/local/ykman/ykman -v | awk '{print $5}'}
-	downloadURL=$(downloadURLFromGit Yubico yubikey-manager)
-    appNewVersion=$(versionFromGit Yubico yubikey-manager)
-    expectedTeamID="LQA3CS5MM7"
-    #CLI for YubikeyManager which is not installed via the QT version.
-    ;;
-yubikeymanagerqt)
-    name="YubiKey Manager GUI"
-    type="pkg"
     downloadURL="https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-latest-mac.pkg"
     appNewVersion=$(curl -fsIL "${downloadURL}" | grep -i "^location" | grep -Eo "[1-9][0-9\.]*" )
     expectedTeamID="LQA3CS5MM7"
