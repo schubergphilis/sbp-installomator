@@ -5349,14 +5349,6 @@ jamfcheck)
     appNewVersion="$(versionFromGit txhaflaire JamfCheck)"
     expectedTeamID="CLQKFNPCCP"
     ;;
-jamfconnect)
-    name="Jamf Connect"
-    type="pkgInDmg"
-    packageID="com.jamf.connect"
-    downloadURL="https://files.jamfconnect.com/JamfConnect.dmg"
-    appNewVersion=$(curl -fsIL "${downloadURL}" | grep "x-amz-meta-version" | grep -o "[0-9.].*[0-9.].*[0-9]")
-    expectedTeamID="483DWKW443"
-    ;;
 jamfconnectconfiguration)
     name="Jamf Connect Configuration"
     type="dmg"
