@@ -7562,6 +7562,7 @@ obsbotwebcam)
     curlOptions=( --referer "https://www.obsbot.com/download/obsbot-tiny-series" )
     appNewVersion=$(echo "$downloadURL" | sed -n 's/.*_\([0-9.]*\)_release.*/\1/p')
     expectedTeamID="7GJANK3822"
+    ;;
 obsidian)
     # credit: Søren Theilgaard (@theilgaard)
     name="Obsidian"
