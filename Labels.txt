@@ -191,6 +191,7 @@ cinema4d2024
 cinema4d2025
 cisdem-documentreader
 citrixworkspace
+claudedesktop
 cleartouchcollage
 clevershare2
 clickshare
