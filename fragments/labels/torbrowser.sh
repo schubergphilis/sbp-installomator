@@ -1,8 +1,7 @@
 torbrowser)
-    # credit: Søren Theilgaard (@theilgaard)
     name="Tor Browser"
     type="dmg"
-    downloadURL=https://www.torproject.org$(curl -fs https://www.torproject.org/download/ | grep "downloadLink" | grep dmg | head -1 | cut -d '"' -f 4)
-    appNewVersion=$(curl -fs https://www.torproject.org/download/ | grep "downloadLink" | grep dmg | head -1 | cut -d '"' -f 4 | cut -d / -f 4)
+    downloadURL="$(curl -fsL https://download.torproject.org/tor-browser-for-desktop/ | grep -oE 'https://dist\.torproject\.org/torbrowser/[0-9.]+/tor-browser-macos-[0-9.]+\.dmg' | head -1)"
+    appNewVersion="$(echo "$downloadURL" | cut -d / -f 5)"
     expectedTeamID="MADPSAYN6T"
     ;;
